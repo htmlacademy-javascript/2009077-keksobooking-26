@@ -67,10 +67,10 @@ const location = {
 const offer = {
    title: getRandomArrayElement(offerTitle),
    address: `${location.lat}, ${location.lng}`,
-   price: getRandomPositiveInteger(minPrice, maxPrice),
+   price: getRandomPositiveInteger(),
    type: getRandomArrayElement(housingType),
-   rooms: getRandomPositiveInteger(1, maxRooms),
-   guests: getRandomPositiveInteger(1, maxGuests),
+   rooms: getRandomPositiveInteger(),
+   guests: getRandomPositiveInteger(),
    checkin: getRandomArrayElement(checkinTime),
    features: getShuffledUniqueElements(offerFeatures),
    description: getRandomArrayElement(offerDescriptions),
