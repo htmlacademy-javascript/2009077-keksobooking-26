@@ -36,7 +36,7 @@ function getShuffledUniqueElements (elements) {
 const avatarNumber =  getRandomPositiveInteger(1, 10);
 
 const author = {
-    avatar: `img/avatars/user${avatarNumber.padStart(2, '0')}.png`
+    avatar: `img/avatars/user${String(avatarNumber).padStart(2, '0')}.png`
 };
 // где {{xx}} — это число от 1 до 10. Перед однозначными числами ставится 0. Например, 01, 02...10. Адреса изображений не повторяются.
 
@@ -59,14 +59,14 @@ const offerPhotos = [
     'https://assets.htmlacademy.ru/content/intensive/javascript-1/keksobooking/claire-rendall-b6kAwr1i0Iw.jpg'
 ];
 
-const location = {
+const offerLocation = {
     lat: getRandomPositiveFloat(35.65000, 35.70000, 5),
     lng: getRandomPositiveFloat(139.70000, 139.80000, 5),
 };
 
 const offer = {
    title: getRandomArrayElement(offerTitle),
-   address: `${location.lat}, ${location.lng}`,
+   address: `${offerLocation.lat}, ${offerLocation.lng}`,
    price: getRandomPositiveInteger(),
    type: getRandomArrayElement(housingType),
    rooms: getRandomPositiveInteger(),
@@ -77,11 +77,10 @@ const offer = {
    photos: getShuffledUniqueElements(offerPhotos)
 };
 
-
 const createAdvertisement = () => ({
     autor: author,
     offer: offer,
-    location
+    offerLocation
 });
 
 const similarAdvertisements = Array.from({length: 10}, createAdvertisement);
