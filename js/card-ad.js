@@ -51,11 +51,11 @@ const cardAd = (cards) => {
 
         cardtemplate.querySelector('.popup__type').textContent = housingType[card.offer.type];
 
-        cardtemplate.querySelector('.popup__text--capacity').textContent = `${card.offer.rooms} комнаты для ${card.offer.guests} гостей`;
+        cardtemplate.querySelector('.popup__text--capacity').textContent =`${card.offer.rooms} комнаты для ${card.offer.guests} гостей`;
 
-        cardtemplate.querySelector('.popup__text--time').textContent = `Заезд 	после ${card.offer.checkin}, выезд до ${card.offer.checkout}`;
+        cardtemplate.querySelector('.popup__text--time').textContent = `Заезд после ${card.offer.checkin}, выезд до ${card.offer.checkout}`;
 
-        cardtemplate.querySelector('.popup__description').textContent = 	card.offer.description;
+        cardtemplate.querySelector('.popup__description').textContent = card.offer.description;
 
         cardtemplate.querySelector('.popup__avatar').src = card.author.avatar;
 
