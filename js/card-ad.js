@@ -12,7 +12,7 @@ const housingType = {
 };
 
 const cardAd = (cards) => {
-    cards.forEach((card) => {
+    Object.keys(cards).forEach((card) => {
         const cardtemplate = fragment.cloneNode(true);
 
         const featuresRandom = card.offer.features;
