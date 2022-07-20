@@ -2,6 +2,8 @@
 //импорт модулей
 import './util.js';
 import {similarAdvertisements} from './data.js';
-console.log(
-    similarAdvertisements()
-);
+import {cardAd} from './card-ad.js';
+
+cardAd(similarAdvertisements());
+
+
