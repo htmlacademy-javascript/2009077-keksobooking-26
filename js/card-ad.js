@@ -1,7 +1,10 @@
 /* eslint-disable no-trailing-spaces */
 /* eslint-disable indent */
+import {similarAdvertisements} from './data.js';
+
 const map = document.querySelector('#map-canvas');
 const fragment = document.querySelector('#card').content.querySelector('.popup');
+const cards = similarAdvertisements ();
 
 const housingType = {
   'flat': 'Квартира',
@@ -11,8 +14,8 @@ const housingType = {
   'hotel': 'Отель'
 };
 
-const cardAd = (cards) => {
-    Object.keys(cards).forEach((card) => {
+const cardAd = () => {
+    cards.forEach((card) => {
         const cardtemplate = fragment.cloneNode(true);
 
         const featuresRandom = card.offer.features;
